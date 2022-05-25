@@ -19,7 +19,24 @@ in format
  in form 
   {"status" : (AP/DA) }     // for AP - approved   DP - disapproved
   
-## to view a user's all requested leaves
- send request to http://127.0.0.1:8000/me
- with the user's access token in the header
   
+  
+## to view a user's all requested leaves
+ go to 127.0.0.1:8000/auth/jwt/create
+  send request in format 
+  {
+    "username": "",
+    "password": ""
+  }
+ with the user's access token in the header in format  Authorization JWT ...access token ...
+ send request to http://127.0.0.1:8000/myleaves
+ 
+  
+  ## for any end point that requires authentication
+   go to 127.0.0.1:8000/auth/jwt/create
+  send request in format 
+  {
+    "username": "",
+    "password": ""
+  }
+ with the user's access token in the header in format  Authorization JWT ...access token ...
